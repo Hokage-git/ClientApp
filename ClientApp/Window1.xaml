@@ -1,0 +1,30 @@
+﻿<Window x:Class="ClientApp.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClientApp"
+        mc:Ignorable="d"
+        Closing="DataWindow_Closing"
+        Title="Chat" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+        <ListView x:Name="ChatChooser" Grid.Column="0" Margin="3" Grid.RowSpan="2">
+
+        </ListView>
+        <TextBox x:Name="vvod" Grid.Column="1" Grid.Row="1" Margin="3,3,70,3"/>
+
+        <ListView x:Name="Chats" Grid.Column="1" Grid.Row="0" Margin="3">
+            
+        </ListView>
+        <Button x:Name="SendBut" Content="Send" HorizontalAlignment="Left" VerticalAlignment="Top" Width="62" Grid.Column="1" Margin="463,3,0,0" Grid.Row="1" Height="32" FontSize="16" Click="Button_Click"/>
+    </Grid>
+</Window>
